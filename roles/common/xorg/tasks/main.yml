@@ -8,4 +8,4 @@
     state: latest
   with_items:
     - 'xorg'
-    - 'oepnbox'
+    - 'openbox'
