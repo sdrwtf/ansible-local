@@ -4,7 +4,7 @@ tasks:
   - name: htop
     apt:
       update_cache: yes
-      name: {{item}}
+      name: "{{ item }}"
       state: latest
     with_items:
-      - htop
+      - 'htop'
