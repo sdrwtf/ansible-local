@@ -3,6 +3,9 @@
   hosts: localhost
   become: true
   roles:
+    - role: timezone
+      tags:
+        - test
     - role: common
       tags:
         - min
