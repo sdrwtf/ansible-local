@@ -1,0 +1,16 @@
+---
+# /roles/common/tasks/manin.yml
+
+- name: Install basic packages
+  become: yes
+  apt:
+    update_cache: yes
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - 'htop'
+    - 'curl'
+    - 'wget'
+    - 'ncdu'
+    - 'bmon'
+    - 'screen'
