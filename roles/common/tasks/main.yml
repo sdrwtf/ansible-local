@@ -1,10 +1,14 @@
 ---
 # /roles/common/tasks/main.yml
 
-- name: Install basic packages
+- name: Update repositories
   become: yes
   apt:
     update_cache: yes
+
+- name: Install basic packages
+  become: yes
+  apt:
     name: "{{ item }}"
     state: latest
   with_items:

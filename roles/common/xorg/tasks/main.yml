@@ -4,7 +4,6 @@
 - name: Install xorg display server and openbox
   become: yes
   apt:
-    update_cache: yes
     name: "{{ item }}"
     state: latest
   with_items:
