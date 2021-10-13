@@ -3,9 +3,8 @@
   hosts: localhost
   become: true
   roles:
- #   - test
     - role: common
-        tags:
-          - min
-          - dev
-          - all
+      tags:
+        - min
+        - dev
+        - all
