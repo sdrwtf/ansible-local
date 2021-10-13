@@ -1,7 +1,7 @@
 ---
 # /roles/common/xorg/tasks/main.yml
 
-- name: Install xorg display server
+- name: Install xorg display server and openbox
   become: yes
   apt:
     update_cache: yes
@@ -9,8 +9,4 @@
     state: latest
   with_items:
     - 'xorg'
-    - 'curl'
-    - 'wget'
-    - 'ncdu'
-    - 'bmon'
-    - 'screen'
+    - 'oepnbox'

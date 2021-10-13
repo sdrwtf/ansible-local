@@ -5,14 +5,10 @@
   roles:
     - role: common/timezone
       tags:
-        - test
+        - always
     - role: common
       tags:
-        - min
-        - dev
-        - all
-   # - role: common/xorg
-   #   tags:
-   #     - min
-   #     - dev
-   #     - all
+        - always
+   - role: common/xorg
+     tags:
+       - test
