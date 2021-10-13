@@ -1,11 +1,29 @@
 ---
 # /roles/common/xorg/tasks/main.yml
 
-- name: Install xorg display server and openbox
+- name: Install xorg display server
   become: yes
   apt:
-    name: "{{ item }}"
-    state: absent
-  with_items:
-    - 'xorg'
-    - 'openbox'
+    name: 'xserver-xorg-core'
+    state: latest
+    install_recommends: no
+
+- name: Install BSPWM
+  become: yes
+  apt:
+    name: 'bspwm'
+    state: latest
+
+- name: Install sxhkd
+  become: yes
+  apt:
+    name: 'sxhkd'
+    state: latest
+    install_recommends: no
+
+- name: Install xinit
+  become: yes
+  apt:
+    name: 'xserver-xorg-core'
+    state: latest
+    install_recommends: no
