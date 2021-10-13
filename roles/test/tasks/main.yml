@@ -1,0 +1,7 @@
+---
+tasks:
+  - name: htop
+    apt: name={{item}}
+      update_cache: yes
+    with_items:
+      - htop

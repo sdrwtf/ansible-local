@@ -1,0 +1,6 @@
+---
+- name: local installation
+  hosts: localhost
+  become: true
+  roles:
+    - test
