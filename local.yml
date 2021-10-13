@@ -3,7 +3,7 @@
   hosts: localhost
   become: true
   roles:
-    - role: timezone
+    - role: common/timezone
       tags:
         - test
     - role: common
